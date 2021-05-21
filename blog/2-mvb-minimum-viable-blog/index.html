@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="bNxytYqS7aSeCyVwnQ5jbQCMR3kcvkk5zzNfR9BM">
+
+        <title>gal.jakic.dev</title>
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="/css/app.css?id=afaa61c47e9a9eb306c8">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+        <!-- Scripts -->
+        <script src="/js/app.js?id=b17537d67f6c6e3b98ff" defer></script>
+        <script>
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+
+            function data(){
+                return {
+                    navbarOpen: false,
+                    dark: (window.matchMedia('(prefers-color-scheme: dark)').matches),
+                    dob: Math.floor((Date.now()-Date.parse('07 Jan 1989')) / 86400000),
+                    toggleDarkMode() {
+                        this.dark = !this.dark
+                    },
+                }
+            }
+        </script>
+    </head>
+    <body class="bg-white dark dark:bg-gray-800" x-data="data()" :class="{'dark': dark }"">
+        
+        <nav class="h-32 fixed top-0 w-screen flex items-center justify-between flex-wrap bg-white dark:bg-gray-800 py-6 px-10 z-10 border-b border-burnt-orange">
+    <a href="https://gal.jakic.dev" class="flex items-center flex-shrink-0 text-burnt-orange mr-6">
+        
+            <img class="h-16 w-16 mr-4" src="/img/gjd-logo-circle.png" alt="gal.jakic.dev logo">
+    </a>
+    <div class="block lg:hidden">
+        <button
+            class="flex items-center px-3 py-2 text-burnt-orange"
+            @click="navbarOpen = !navbarOpen">
+            <i class="las la-3x la-stream"></i>
+        </button>
+    </div>
+    <div class="w-full block flex-grow font-bold lg:flex lg:items-center lg:w-auto text-left lg:text-right mt-10 lg:mt-0 bg-white dark:bg-gray-800 h-screen lg:h-auto" :class="{ 'hidden': !navbarOpen}">
+        <div class="text-md lg:flex-grow">
+            <a href="https://gal.jakic.dev"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg "">
+                <i class="las la-2x la-campground mr-2"></i>
+                Home
+            </a>
+            <!--<a href="#"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-book mr-2"></i>
+                Book
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-headset"></i>
+                Work
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-frog"></i>
+                Mini Apps
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-code-branch"></i>
+                Side Projects
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-terminal"></i>
+                Open Source
+            </a> -->
+            <a href="https://gal.jakic.dev/blog"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg text-burnt-orange dark:text-burnt-orange">
+                <i class="las la-2x la-feather mr-2"></i>
+                Blog
+            </a>
+            <!--
+            <a href="/talks"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-microphone-alt mr-2"></i>
+                Talks
+            </a>
+            <a href="/documentary"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-mountain mr-2"></i>
+                Documentary
+            </a>
+            -->
+            <a href="/about" class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg ">
+                <i class="las la-2x la-address-card mr-2"></i>
+                About
+            </a>
+            <a class="block mt-4 lg:ml-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-burnt-orange hover:text-burnt-orange dark:hover:text-burnt-orange text-lg" @click="toggleDarkMode()">
+                <i class="las la-2x la-adjust mr-2 transition delay-150 transform rotate-180" :class="{'rotate-0': dark }"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+
+        <main class="mt-20 pb-24 px-10 font-medium leading-5 text-gray-900 bg-transparent dark:bg-gray-800 dark:text-gray-100">
+            <div class="flex flex-col items-center mt-32">
+        <div class="pt-5 pb-0 leading-8"  style="max-width: 900px;">
+            <div class="px-10 mx-auto mb-16 text-center">
+                <div
+                class="inline-block font-sans font-extrabold text-gray-700 dark:text-gray-300 uppercase box-border"
+                >
+                May 17, 2021
+            </div>
+            <h1
+            class="mx-0 mt-5 mb-2 font-sans text-6xl font-black"
+            style="line-height: 110%;"
+            >
+            MVB: Minimum Viable Blog
+        </h1>
+        <div class="text-black dark:text-white">
+            <div class="inline mr-1 font-sans box-border">by</div>
+            <div class="inline-block font-sans font-bold box-border">
+                Gal Jakič
+            </div>
+        </div>
+        <p class="my-2 text-2xl text-gray-700 dark:text-gray-300 font-serif" style="line-height: 160%;">
+            It took me two years to go from buying the jakic.dev domain and turning it into a blog. The reason was obvious, simple and didn&#039;t have anything to do with tech or work.
+        </p>
+    </div>
+    </div>
+    <div class="pt-0 pb-5 leading-8 text-black">
+        <div
+        class="flex flex-col justify-center items-center px-10 mx-auto text-black w-screen"
+        style="max-width: 1200px;">
+        <img
+        src="https://images.unsplash.com/photo-1455849318743-b2233052fcff"
+        alt=""
+        class="inline-block max-w-full align-middle border-0 box-border filter grayscale"
+        />
+    </div>
+    </div>
+    <div class="px-10 mx-auto text-black prose dark:prose-dark prose-xl text-gray-700 font-normal font-serif" style="max-width: 1200px;">
+        <p>As developers, our job is not (only) to write code. We spend most of our professional lives translating business requirements to code, tools, and products. Creating abstractions. Turning concepts into models, migrations, controllers, and endpoints. We turn ideas into flowcharts and prototypes and make beautiful products, (ideally) on time and on budget.</p>
+<p>We get to play with all sorts of tech. From basic to advanced. From great to the one that makes you cringe.</p>
+<p>This is why it is an absolute nightmare to try to design and publish your own personal site. The voice in your head tells you it is not polished enough. Or wide enough. Or colorful. Or full of content. Well, you get the idea...</p>
+<p>That it needs more references and client testimonials. It also tells you your front-end skills are inadequate. That you should hire someone to code it up for you, or at least review it. That you need to get a proper photo taken and use one of the technologies from the razor's edge to build it. Maybe it should be serverless? Maybe it should use GraphQL to return your content?</p>
+<p>I'm not describing a fictional voice. This voice was in my head the whole time when building gal.jakic.dev, where this article will reside.</p>
+<p>I almost gave in and listened. But then I remembered:</p>
+<blockquote>
+<p>This voice is not real. This voice is the reason that I don't have a personal web page, even after 15 years of working on the web. This voice is just imposter syndrome talking. Just ship the f*cking thing already...</p>
+</blockquote>
+<h2>There is this thing called WordPress you could use...</h2>
+<p>Yes and no. It's not that the features of MVB will be &quot;too advanced for WordPress to handle&quot;. But every time I type <code>laravel new</code>, it's a magical feeling. I don't get that with WordPress. And we all need more magic in our lives.</p>
+<h2>How about Jigsaw from Tighten?</h2>
+<p>Jigsaw is hands down one of the best products out there. I only have one issue with Jigsaw: I wish its folder structure mirrored Laravel's. That would make it much easier for me to get started and not have to re-map the concepts in my head.</p>
+<h2>So, what will you use?</h2>
+<p>So I built myself an MVB - a minimum viable blog. It is a Laravel app, with Tailwind CSS and Alpine.js. It has a Home page. It has a Blog page. It has an About page. I built it myself and it is good enough.</p>
+<p>There are a million things I wish were on it and are not yet there. But as long as I keep writing, they will pop up eventually.</p>
+<p>If you got this far, thank you.</p>
+<p>P.S.
+Check <a href="/this-page">&quot;$this-&gt;page&quot;</a>, if you're interested in learning more about the technology used to power this website, you can also part of this website or better yet, contribute your own.</p>
+    </div>
+    <div
+    class="mt-20 px-10 py-10 text-black prose dark:prose-dark prose-xl text-gray-700 font-normal font-serif flex flex-col items-center border-t border-burnt-orange"
+    style="min-height: 1px;"
+  >
+    <img
+      src="/img/gj-bio.jpeg"
+      class="block mx-auto w-32 h-32 text-gray-800 align-middle border-0 box-border filter grayscale mt-10"
+      style="border-radius: 50%;"
+    />
+    <div class="inline-block py-px px-2 font-sans text-base font-extrabold text-white dark:text-black uppercase bg-black dark:bg-white rounded box-border no-wrap">
+      Gal Jakič
+  </div>
+    <div
+      class="my-6 px-10 mx-auto text-black prose prose-xl dark:prose-dark text-gray-700 font-normal font-serif"
+    >
+    <p>Project &amp; Product Manager at <a target="_blank" href="https://briefd.io" rel="noopener noreferrer">Briefd</a> and Project Delivery Lead at <a target="_blank" href="https://briefd.io" rel="noopener noreferrer">Hiveterminal</a>.
+In 2006, he got started in tech by developing WordPress websites and got into tech full time in 2016.
+Between 2005 and 2014, he has been a member of the Slovene Para Alpine Ski Team and has represented his
+home country, Slovenia, in Paralympic Winter Games in 2006, 2010 and 2014.</p>
+    </div>
+  </div>
+        </main>
+
+        <footer class="text-gray-700 dark:text-gray-300 bg-transparent dark:bg-gray-800 font-normal">
+    <div class="px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <p class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">&copy; 2020 - Gal Jakič. All Rights Reserved.
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a href="https://twitter.com/TeamJakic" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Twitter</a>
+          <a href="https://linkedin.com/in/galjakic" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">LinkedIn</a>
+          <a href="https://github.com/morpheus7CS" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Github</a>
+          <a href="/uses" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Uses</a>
+          <a href="/this-page" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">$this->page</a>
+          <!--<a href="/supports" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Supports</a>-->
+      </span>
+    </div>
+</footer> 
+
+    </body>
+</html>

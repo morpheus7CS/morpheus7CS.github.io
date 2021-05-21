@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="bNxytYqS7aSeCyVwnQ5jbQCMR3kcvkk5zzNfR9BM">
+
+        <title>gal.jakic.dev</title>
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="/css/app.css?id=afaa61c47e9a9eb306c8">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+        <!-- Scripts -->
+        <script src="/js/app.js?id=b17537d67f6c6e3b98ff" defer></script>
+        <script>
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+
+            function data(){
+                return {
+                    navbarOpen: false,
+                    dark: (window.matchMedia('(prefers-color-scheme: dark)').matches),
+                    dob: Math.floor((Date.now()-Date.parse('07 Jan 1989')) / 86400000),
+                    toggleDarkMode() {
+                        this.dark = !this.dark
+                    },
+                }
+            }
+        </script>
+    </head>
+    <body class="bg-white dark dark:bg-gray-800" x-data="data()" :class="{'dark': dark }"">
+        
+        <nav class="h-32 fixed top-0 w-screen flex items-center justify-between flex-wrap bg-white dark:bg-gray-800 py-6 px-10 z-10 border-b border-burnt-orange">
+    <a href="https://gal.jakic.dev" class="flex items-center flex-shrink-0 text-burnt-orange mr-6">
+        
+            <img class="h-16 w-16 mr-4" src="/img/gjd-logo-circle.png" alt="gal.jakic.dev logo">
+    </a>
+    <div class="block lg:hidden">
+        <button
+            class="flex items-center px-3 py-2 text-burnt-orange"
+            @click="navbarOpen = !navbarOpen">
+            <i class="las la-3x la-stream"></i>
+        </button>
+    </div>
+    <div class="w-full block flex-grow font-bold lg:flex lg:items-center lg:w-auto text-left lg:text-right mt-10 lg:mt-0 bg-white dark:bg-gray-800 h-screen lg:h-auto" :class="{ 'hidden': !navbarOpen}">
+        <div class="text-md lg:flex-grow">
+            <a href="https://gal.jakic.dev"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg "">
+                <i class="las la-2x la-campground mr-2"></i>
+                Home
+            </a>
+            <!--<a href="#"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-book mr-2"></i>
+                Book
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-headset"></i>
+                Work
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-frog"></i>
+                Mini Apps
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-code-branch"></i>
+                Side Projects
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-terminal"></i>
+                Open Source
+            </a> -->
+            <a href="https://gal.jakic.dev/blog"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg ">
+                <i class="las la-2x la-feather mr-2"></i>
+                Blog
+            </a>
+            <!--
+            <a href="/talks"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-microphone-alt mr-2"></i>
+                Talks
+            </a>
+            <a href="/documentary"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-mountain mr-2"></i>
+                Documentary
+            </a>
+            -->
+            <a href="/about" class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg text-burnt-orange dark:text-burnt-orange">
+                <i class="las la-2x la-address-card mr-2"></i>
+                About
+            </a>
+            <a class="block mt-4 lg:ml-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-burnt-orange hover:text-burnt-orange dark:hover:text-burnt-orange text-lg" @click="toggleDarkMode()">
+                <i class="las la-2x la-adjust mr-2 transition delay-150 transform rotate-180" :class="{'rotate-0': dark }"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+
+        <main class="mt-20 pb-24 px-10 font-medium leading-5 text-gray-900 bg-transparent dark:bg-gray-800 dark:text-gray-100">
+            <div class="flex flex-col items-center">
+        <div class="pt-5 pb-0 leading-8 text-black" >
+            <div
+            class="flex flex-col justify-center items-center px-10 mx-auto text-black w-screen"
+            style="max-width: 1200px;">
+            <img
+            src=""
+            alt=""
+            class="inline-block max-w-full align-middle border-0 box-border"
+            />
+        </div>
+        </div>
+        <div class="pt-5 pb-0 leading-8"  style="max-width: 1200px;">
+            <div class="px-10 mx-auto mb-16 text-left">
+            <h1
+            class="mx-0 mt-5 mb-2 font-sans text-6xl font-black lowercase"
+            style="line-height: 110%;"
+            >
+            <p>$this-&gt;page</p>
+        </h1>
+        <p class="my-2 text-2xl text-gray-700 dark:text-gray-300 prose dark:prose-dark max-w-none" style="line-height: 160%;">
+            I have decided to put together a &quot;$this-&gt;page&quot;, which details all the tech this website uses to run and keep it running. You can find the source code for it <a href="https://github.com/morpheus7CS/gal.jakic.dev">here</a> or share your own &quot;$this-&gt;page&quot; by sending a pull request to the README <a href="https://github.com/morpheus7CS/this-page">here</a>.
+        </p>
+        </div>
+        <div class="px-10 mx-auto text-black prose dark:prose-dark prose-xl prose-burnt-orange text-gray-700 dark:text-gray-300 font-normal font-serif" style="max-width: 1200px;">
+            <p>Stack:</p>
+<ul>
+<li>
+<a target="_blank" href="https://laravel.com" rel="noopener noreferrer">Laravel</a> - I have first used Laravel in development in 2016 and have been in love with it ever since. It is my go-to when developing something for myself.</li>
+<li>
+<a target="_blank" href="https://tailwindcss.com" rel="noopener noreferrer">Tailwind CSS</a> - I am not very good at writing front-end code or have found this exercise enjoyable in the past. Tailwind makes CSS a pleasure to write and I find myself learning a lot about CSS in the process.</li>
+<li>
+<a target="_blank" href="https://github.com/alpinejs/alpine" rel="noopener noreferrer">Alpine.js</a> - if CSS isn't my friend, JavaScript has the ability to wrap my brain and squeeze it, until only lemon juice comes out. Something about JS does not work for me, but Alpine.js makes tiny interactions simple again.</li>
+<li>
+<a target="_blank" href="https://github.com/calebporzio/sushi" rel="noopener noreferrer">Sushi</a> - from the creator of Alpine.js, comes another great little package. Sushi is an array-based Eloquent driver and I use it a lot when prototyping the minor features of the page and do not necessarily want to write all the boilerplate yet.</li>
+<li>
+<a target="_blank" href="https://github.com/spatie/laravel-export" rel="noopener noreferrer">laravel-export</a> - This package from Spatie page exports this website as a static HTML, so that it loads fast for you, the reader, and keeps the complexity low for me, the lazy has-been developer.</li>
+<li>
+<a target="_blank" href="https://filamentadmin.com/" rel="noopener noreferrer">Filament</a> - Filament calls itself &quot;The elegant TALL stack admin for Laravel artisans&quot;. It's not fully necessary for this page to run - see reason above - but somehow, it's still much more enjoyable to write blog posts in UI than IDE.</li>
+<li>
+<a target="_blank" href="https://github.com/ryangjchandler/orbit" rel="noopener noreferrer">Orbit</a> - Why bother with a database, when your plan is to have the code and all its data public? Orbit allows me to still use Eloquent, but having the data persisted in static files.</li>
+<li>
+<a target="_blank" href="https://icons8.com/line-awesome" rel="noopener noreferrer">LineAwesome</a> - Font Awesome is, well, awesome, but I've seen it in way too many projects. Line Awesome keeps the same classes as its predecessor but gives your website a fresh look.</li>
+<li>
+<a target="_blank" href="https://unsplash.com" rel="noopener noreferrer">Unsplash</a> - trust me - I used to take photos for a long time and great photos are hard to take. Try writing blogs and taking pictures. Unsplash makes this process easy for me and we do our best to also give credit to the authors of those shots and hopefully they get rewarded for their work.</li>
+</ul>
+<p>Inspiration:</p>
+<ul>
+<li>
+<a target="_blank" href="https://aspire-template.webflow.io/" rel="noopener noreferrer">Aspire</a> - I have been looking for a beautiful, yet informal and playful page template for a while. Although I changed a lot of parts, I have been heavily inspired by this template. If you're in the market for some web theme, give the creators some love.</li>
+</ul>
+<p>Hosting:</p>
+<ul>
+<li>
+<a target="_blank" href="https://pages.github.com/" rel="noopener noreferrer">Github Pages</a> - All my code lives on Github. My personal projects, my open source work and some of my client work. I've used Netlify and Vercel in the past, but simple is better than complex. If it works, don't fix it.</li>
+</ul>
+        </div>
+        </div>
+        </div>
+        </main>
+
+        <footer class="text-gray-700 dark:text-gray-300 bg-transparent dark:bg-gray-800 font-normal">
+    <div class="px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <p class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">&copy; 2020 - Gal Jakič. All Rights Reserved.
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a href="https://twitter.com/TeamJakic" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Twitter</a>
+          <a href="https://linkedin.com/in/galjakic" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">LinkedIn</a>
+          <a href="https://github.com/morpheus7CS" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Github</a>
+          <a href="/uses" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Uses</a>
+          <a href="/this-page" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">$this->page</a>
+          <!--<a href="/supports" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Supports</a>-->
+      </span>
+    </div>
+</footer> 
+
+    </body>
+</html>

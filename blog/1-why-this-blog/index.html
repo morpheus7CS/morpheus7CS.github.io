@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="bNxytYqS7aSeCyVwnQ5jbQCMR3kcvkk5zzNfR9BM">
+
+        <title>gal.jakic.dev</title>
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="/css/app.css?id=afaa61c47e9a9eb306c8">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+        <!-- Scripts -->
+        <script src="/js/app.js?id=b17537d67f6c6e3b98ff" defer></script>
+        <script>
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+
+            function data(){
+                return {
+                    navbarOpen: false,
+                    dark: (window.matchMedia('(prefers-color-scheme: dark)').matches),
+                    dob: Math.floor((Date.now()-Date.parse('07 Jan 1989')) / 86400000),
+                    toggleDarkMode() {
+                        this.dark = !this.dark
+                    },
+                }
+            }
+        </script>
+    </head>
+    <body class="bg-white dark dark:bg-gray-800" x-data="data()" :class="{'dark': dark }"">
+        
+        <nav class="h-32 fixed top-0 w-screen flex items-center justify-between flex-wrap bg-white dark:bg-gray-800 py-6 px-10 z-10 border-b border-burnt-orange">
+    <a href="https://gal.jakic.dev" class="flex items-center flex-shrink-0 text-burnt-orange mr-6">
+        
+            <img class="h-16 w-16 mr-4" src="/img/gjd-logo-circle.png" alt="gal.jakic.dev logo">
+    </a>
+    <div class="block lg:hidden">
+        <button
+            class="flex items-center px-3 py-2 text-burnt-orange"
+            @click="navbarOpen = !navbarOpen">
+            <i class="las la-3x la-stream"></i>
+        </button>
+    </div>
+    <div class="w-full block flex-grow font-bold lg:flex lg:items-center lg:w-auto text-left lg:text-right mt-10 lg:mt-0 bg-white dark:bg-gray-800 h-screen lg:h-auto" :class="{ 'hidden': !navbarOpen}">
+        <div class="text-md lg:flex-grow">
+            <a href="https://gal.jakic.dev"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg "">
+                <i class="las la-2x la-campground mr-2"></i>
+                Home
+            </a>
+            <!--<a href="#"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-book mr-2"></i>
+                Book
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-headset"></i>
+                Work
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-frog"></i>
+                Mini Apps
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-code-branch"></i>
+                Side Projects
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-terminal"></i>
+                Open Source
+            </a> -->
+            <a href="https://gal.jakic.dev/blog"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg text-burnt-orange dark:text-burnt-orange">
+                <i class="las la-2x la-feather mr-2"></i>
+                Blog
+            </a>
+            <!--
+            <a href="/talks"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-microphone-alt mr-2"></i>
+                Talks
+            </a>
+            <a href="/documentary"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-mountain mr-2"></i>
+                Documentary
+            </a>
+            -->
+            <a href="/about" class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg ">
+                <i class="las la-2x la-address-card mr-2"></i>
+                About
+            </a>
+            <a class="block mt-4 lg:ml-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-burnt-orange hover:text-burnt-orange dark:hover:text-burnt-orange text-lg" @click="toggleDarkMode()">
+                <i class="las la-2x la-adjust mr-2 transition delay-150 transform rotate-180" :class="{'rotate-0': dark }"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+
+        <main class="mt-20 pb-24 px-10 font-medium leading-5 text-gray-900 bg-transparent dark:bg-gray-800 dark:text-gray-100">
+            <div class="flex flex-col items-center mt-32">
+        <div class="pt-5 pb-0 leading-8"  style="max-width: 900px;">
+            <div class="px-10 mx-auto mb-16 text-center">
+                <div
+                class="inline-block font-sans font-extrabold text-gray-700 dark:text-gray-300 uppercase box-border"
+                >
+                May 14, 2021
+            </div>
+            <h1
+            class="mx-0 mt-5 mb-2 font-sans text-6xl font-black"
+            style="line-height: 110%;"
+            >
+            Why This Blog?
+        </h1>
+        <div class="text-black dark:text-white">
+            <div class="inline mr-1 font-sans box-border">by</div>
+            <div class="inline-block font-sans font-bold box-border">
+                Gal Jakič
+            </div>
+        </div>
+        <p class="my-2 text-2xl text-gray-700 dark:text-gray-300 font-serif" style="line-height: 160%;">
+            A Hello-World-like blog post with an equally lame title, about why this blog exists and what I would like to do with it going forward.
+        </p>
+    </div>
+    </div>
+    <div class="pt-0 pb-5 leading-8 text-black">
+        <div
+        class="flex flex-col justify-center items-center px-10 mx-auto text-black w-screen"
+        style="max-width: 1200px;">
+        <img
+        src="https://images.unsplash.com/photo-1620608964186-18a8cfc2ad44?"
+        alt=""
+        class="inline-block max-w-full align-middle border-0 box-border filter grayscale"
+        />
+    </div>
+    </div>
+    <div class="px-10 mx-auto text-black prose dark:prose-dark prose-xl text-gray-700 font-normal font-serif" style="max-width: 1200px;">
+        <p>I'm just a regular guy, trying to help startups and their teams succeed in a challenging environment. Apart from that, I have a wife (Nina), a son (Leo) and a dog (Lego). I have an opportunity to work full time on two magnificent projects: <a target="_blank" href="https://autobrief.io" rel="noopener noreferrer">AutoBrief</a>, an intelligent future-proof solution to improve used-car sales and <a target="_blank" href="https://hiveterminal.com" rel="noopener noreferrer">Hiveterminal</a>, a blockchain-based invoice financing company. It comes with two teams I love and a never-ending menu of challenges I love solving.</p>
+<p>Even after 15 years of working with web technologies and 5+ years of working in tech on a daily basis, I am still fascinated by the simple things. Like the fact that I can give you my exact age as you're reading this, which is <span x-text="dob"></span> days, without needing to update the page every single day.</p>
+<p>We own a car and in a few years, my wife will own the 52 square meter flat we live in. We are lucky to live in a quiet part of town, in a country - which you should visit, should you ever get the chance - where you don't have to worry about crime rates, or healthcare bills, or being able to send your children to college. Incidentally, the same country that gave the World Luka Dončič. (Slovenia. And you are welcome.)</p>
+<p>In 2002, I suffered a spinal stroke and have a wheelchair to prove it. It allowed me to do unimaginable things: spend the next 10 years of my life focused on Para-Alpine Ski Racing, being part of Slovene Para-Alpine Ski Team, and representing my country in 3 Paralympic Winter Games: 2006 Torino, 2010 Vancouver, and 2014 Sochi - if you are a nerd for details, such as me.</p>
+<p>During that time, I was also exposed to some other amazing opportunities: becoming the 1st skier with a disability to ski down the 2nd largest ski jumping hill in the World in a straight line. Crossing Slovenia on a hand bike in 25 hours. Being a <a target="_blank" href="https://www.youtube.com/watch?v=6rra_szvoIE&amp;t=1s" rel="noopener noreferrer">TEDx speaker</a>. Being named Friend of <a target="_blank" href="https://www.wingsforlife.com/en/" rel="noopener noreferrer">Wings For Life Foundation</a> (along with many exceptional athletes, among them Felix Baumgartner, the man who - literally - jumped from the edge of Space). Working as a motivational speaker for established brands in Slovenia and Europe, trying to inspire the up-and-coming developers on meetups (and perhaps soon, conferences). Professionally working with and for, many talented developers, designers, and business owners.</p>
+<p>But it's the other side of the coin that sent me on a journey. If life - or more specifically, my own spinal stroke or two of my wife's breast cancer diagnosis - have taught me anything is that you should take nothing for granted.</p>
+<p>I am by no account perfect. I'm at my best in challenging situations, or as I like to put it, long-distance suffering. I'm also my own worst enemy when the landscape is perfect. I tend to overthink, over-engineer, and subsequently discard ideas, before even giving them a chance to succeed. I still fear front-end code and have a real problem, when trying to write the first page in a blank notebook someone bought for me.</p>
+<p>I hope to get exactly 3 things out of this:</p>
+<ul>
+<li>talk about lessons learned in startup land</li>
+<li>give you a Behind-The-Scenes, Zero-Bull$h!t at some of the stuff we get to do there</li>
+<li>(still don't know and that's OK.)</li>
+</ul>
+<p>Follow along if this sounds like something you would be interested in.</p>
+    </div>
+    <div
+    class="mt-20 px-10 py-10 text-black prose dark:prose-dark prose-xl text-gray-700 font-normal font-serif flex flex-col items-center border-t border-burnt-orange"
+    style="min-height: 1px;"
+  >
+    <img
+      src="/img/gj-bio.jpeg"
+      class="block mx-auto w-32 h-32 text-gray-800 align-middle border-0 box-border filter grayscale mt-10"
+      style="border-radius: 50%;"
+    />
+    <div class="inline-block py-px px-2 font-sans text-base font-extrabold text-white dark:text-black uppercase bg-black dark:bg-white rounded box-border no-wrap">
+      Gal Jakič
+  </div>
+    <div
+      class="my-6 px-10 mx-auto text-black prose prose-xl dark:prose-dark text-gray-700 font-normal font-serif"
+    >
+    <p>Project &amp; Product Manager at <a target="_blank" href="https://briefd.io" rel="noopener noreferrer">Briefd</a> and Project Delivery Lead at <a target="_blank" href="https://briefd.io" rel="noopener noreferrer">Hiveterminal</a>.
+In 2006, he got started in tech by developing WordPress websites and got into tech full time in 2016.
+Between 2005 and 2014, he has been a member of the Slovene Para Alpine Ski Team and has represented his
+home country, Slovenia, in Paralympic Winter Games in 2006, 2010 and 2014.</p>
+    </div>
+  </div>
+        </main>
+
+        <footer class="text-gray-700 dark:text-gray-300 bg-transparent dark:bg-gray-800 font-normal">
+    <div class="px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <p class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">&copy; 2020 - Gal Jakič. All Rights Reserved.
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a href="https://twitter.com/TeamJakic" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Twitter</a>
+          <a href="https://linkedin.com/in/galjakic" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">LinkedIn</a>
+          <a href="https://github.com/morpheus7CS" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Github</a>
+          <a href="/uses" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Uses</a>
+          <a href="/this-page" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">$this->page</a>
+          <!--<a href="/supports" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Supports</a>-->
+      </span>
+    </div>
+</footer> 
+
+    </body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="bNxytYqS7aSeCyVwnQ5jbQCMR3kcvkk5zzNfR9BM">
+
+        <title>gal.jakic.dev</title>
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="/css/app.css?id=afaa61c47e9a9eb306c8">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+        <!-- Scripts -->
+        <script src="/js/app.js?id=b17537d67f6c6e3b98ff" defer></script>
+        <script>
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+
+            function data(){
+                return {
+                    navbarOpen: false,
+                    dark: (window.matchMedia('(prefers-color-scheme: dark)').matches),
+                    dob: Math.floor((Date.now()-Date.parse('07 Jan 1989')) / 86400000),
+                    toggleDarkMode() {
+                        this.dark = !this.dark
+                    },
+                }
+            }
+        </script>
+    </head>
+    <body class="bg-white dark dark:bg-gray-800" x-data="data()" :class="{'dark': dark }"">
+        
+        <nav class="h-32 fixed top-0 w-screen flex items-center justify-between flex-wrap bg-white dark:bg-gray-800 py-6 px-10 z-10 border-b border-burnt-orange">
+    <a href="https://gal.jakic.dev" class="flex items-center flex-shrink-0 text-burnt-orange mr-6">
+        
+            <img class="h-16 w-16 mr-4" src="/img/gjd-logo-circle.png" alt="gal.jakic.dev logo">
+    </a>
+    <div class="block lg:hidden">
+        <button
+            class="flex items-center px-3 py-2 text-burnt-orange"
+            @click="navbarOpen = !navbarOpen">
+            <i class="las la-3x la-stream"></i>
+        </button>
+    </div>
+    <div class="w-full block flex-grow font-bold lg:flex lg:items-center lg:w-auto text-left lg:text-right mt-10 lg:mt-0 bg-white dark:bg-gray-800 h-screen lg:h-auto" :class="{ 'hidden': !navbarOpen}">
+        <div class="text-md lg:flex-grow">
+            <a href="https://gal.jakic.dev"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg "">
+                <i class="las la-2x la-campground mr-2"></i>
+                Home
+            </a>
+            <!--<a href="#"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-book mr-2"></i>
+                Book
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-headset"></i>
+                Work
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-frog"></i>
+                Mini Apps
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-code-branch"></i>
+                Side Projects
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-terminal"></i>
+                Open Source
+            </a> -->
+            <a href="https://gal.jakic.dev/blog"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg ">
+                <i class="las la-2x la-feather mr-2"></i>
+                Blog
+            </a>
+            <!--
+            <a href="/talks"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-microphone-alt mr-2"></i>
+                Talks
+            </a>
+            <a href="/documentary"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-mountain mr-2"></i>
+                Documentary
+            </a>
+            -->
+            <a href="/about" class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg text-burnt-orange dark:text-burnt-orange">
+                <i class="las la-2x la-address-card mr-2"></i>
+                About
+            </a>
+            <a class="block mt-4 lg:ml-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-burnt-orange hover:text-burnt-orange dark:hover:text-burnt-orange text-lg" @click="toggleDarkMode()">
+                <i class="las la-2x la-adjust mr-2 transition delay-150 transform rotate-180" :class="{'rotate-0': dark }"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+
+        <main class="mt-20 pb-24 px-10 font-medium leading-5 text-gray-900 bg-transparent dark:bg-gray-800 dark:text-gray-100">
+            <div class="flex flex-col items-center">
+        <div class="pt-5 pb-0 leading-8 text-black" >
+            <div
+            class="flex flex-col justify-center items-center px-10 mx-auto text-black w-screen"
+            style="max-width: 1200px;">
+            <img
+            src=""
+            alt=""
+            class="inline-block max-w-full align-middle border-0 box-border"
+            />
+        </div>
+        </div>
+        <div class="pt-5 pb-0 leading-8"  style="max-width: 1200px;">
+            <div class="px-10 mx-auto mb-16 text-left">
+            <h1
+            class="mx-0 mt-5 mb-2 font-sans text-6xl font-black lowercase"
+            style="line-height: 110%;"
+            >
+            <p>Uses</p>
+        </h1>
+        <p class="my-2 text-2xl text-gray-700 dark:text-gray-300 prose dark:prose-dark max-w-none" style="line-height: 160%;">
+            Having a &quot;Uses&quot; page has now become Internet lore. It is an updated list of tools and gadgets that make my life easier on a daily or weekly basis.
+        </p>
+        </div>
+        <div class="px-10 mx-auto text-black prose dark:prose-dark prose-xl prose-burnt-orange text-gray-700 dark:text-gray-300 font-normal font-serif" style="max-width: 1200px;">
+            <p>Workhorses:</p>
+<ul>
+<li>
+<a target="_blank" href="https://support.apple.com/kb/SP690?locale=en_US" rel="noopener noreferrer">logos</a> - my MacBook Pro (Retina, 15-inch, Late 2013). This computer is an absolute beast! I got it second hand and even after years of abusing it for development and fun, it still works better than most laptops out there. It also features the best keyboard Apple ever made.</li>
+<li>
+<a target="_blank" href="https://support.apple.com/kb/SP756?locale=en_US" rel="noopener noreferrer">kaizen</a> - my MacBook Pro (15-inch, 2017). My wife tells me I type like I'm angry all the time and this computer's keyboard takes a daily punishment of endless emails and Slack messages.</li>
+</ul>
+<p>Communication Tools:</p>
+<ul>
+<li>
+<a target="_blank" href="https://telegram.org/" rel="noopener noreferrer">Telegram</a> - we use Telegram as our main communication tool internally and externally at <a target="_blank" href="https://hiveterminal.com" rel="noopener noreferrer">Hiveterminal</a>. It is simple, works everywhere and I love how the draft messages you start typing on the mobile, get transferred instantly to your other devices as well. Also, zero threads, which I love.</li>
+<li>
+<a target="_blank" href="https://slack.com/" rel="noopener noreferrer">Slack</a> - we use Slack primarily at Briefd as well as conversations between the Hiveterminal and Kalmia development teams.</li>
+<li>
+<a target="_blank" href="https://workspace.google.com/" rel="noopener noreferrer">Google Workspace (formerly G-Suite) &amp; Gmail</a> - the best thing Google ever made, even if you include the search engine side. Having access to multiple emails in one browser window saves lives and electrons.</li>
+</ul>
+<p>Writing:</p>
+<ul>
+<li>
+<a target="_blank" href="https://notion.so/" rel="noopener noreferrer">Notion</a> - I love the simplicity of Notion. The white background and the blank page feeling make it easy for me to write down an idea real quick or hammer out a blog post.</li>
+<li>
+<a target="_blank" href="https://hemingwayapp.com/" rel="noopener noreferrer">Hemingway Editor</a> - I usually throw stuff in Hemingway editor before they get published. Helps me visualize the horrible long sentences and break them down.</li>
+<li>
+<a target="_blank" href="https://www.grammarly.com/" rel="noopener noreferrer">Grammarly</a> - everybody makes typos, mixes in the wrong words, half-deletes a sentence, and uses commas where there shouldn't be any. Grammarly catches at least half and saves you the embarrassment of having to apologize for an email written on the fly.</li>
+</ul>
+<p>Development:</p>
+<ul>
+<li>
+<a target="_blank" href="https://code.visualstudio.com/" rel="noopener noreferrer">VSCode</a> - I do most of my hobby development work in VSCode. Free and beats most IDEs by a long shot, although the IntelliSense for PHP isn't as good or intuitive as in PHPStorm.</li>
+<li>
+<a target="_blank" href="https://github.com/tonsky/FiraCode" rel="noopener noreferrer">Fira Code</a> - the font I use in VSCode. Makes even my $h!t code readable as f*ck.</li>
+<li>
+<a target="_blank" href="https://marketplace.visualstudio.com/items?itemName=smlombardi.slime" rel="noopener noreferrer">Slime</a> - I've enjoyed &quot;close-to-Matrix&quot; color themes for most of my development life and Slime is perfect. Easy on the eyes, yet still providing enough color to be able to scan the code quickly.</li>
+<li>
+<a target="_blank" href="https://brave.com/" rel="noopener noreferrer">Brave Browser</a> - I've been an early adopter of Brave Browser and I can't imagine my life without it. At the time of writing this, it reports 300754 blocked trackers &amp; ads, 5.41GB in bandwidth and 4.2 hours of time saved due to faster load times.</li>
+<li>
+<a target="_blank" href="https://sequel-ace.com/" rel="noopener noreferrer">Sequel Ace</a> - developed as a successor to the now-abandoned SequelPro. For the users of its' predecessor, offers a familiar interface with fewer bugs.</li>
+<li>
+<a target="_blank" href="https://iterm2.com/" rel="noopener noreferrer">iTerm2</a> - I deny knowledge and/or existence of any other terminal app on Mac. Complete with zsh shell. The person that developed the Cmd + click to make links clickable, deserves a medal of honor.</li>
+<li>
+<a target="_blank" href="https://github.com/" rel="noopener noreferrer">Github</a> - by opening up the team features and with the addition of supporting tools, such as Github Actions, Github has become my go-to version control hosting provider. Used by Briefd, Hiveterminal and for my own open-source work.</li>
+</ul>
+<p>Domain purchases:</p>
+<ul>
+<li>
+<a target="_blank" href="https://domenca.com/" rel="noopener noreferrer">Domenca</a> - domain registrar, based in Slovenia. All local domains acquired here.</li>
+<li>
+<a target="_blank" href="https://namecheap.com/" rel="noopener noreferrer">Namecheap</a> - for domains I can't find on Domenca, Namecheap to the rescue. Also has a really cool logo and color scheme generator I occasionally use for side-projects and zero-budget projects.</li>
+</ul>
+<p>Productivity</p>
+<ul>
+<li>
+<a target="_blank" href="https://lastpass.com/" rel="noopener noreferrer">LastPass</a> - The last time I had to remember my password, was in 2019. The rest is stored within the LastPass walls. Works well on mobile and desktop. Sadly, no longer entirely free.</li>
+</ul>
+        </div>
+        </div>
+        </div>
+        </main>
+
+        <footer class="text-gray-700 dark:text-gray-300 bg-transparent dark:bg-gray-800 font-normal">
+    <div class="px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <p class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">&copy; 2020 - Gal Jakič. All Rights Reserved.
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a href="https://twitter.com/TeamJakic" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Twitter</a>
+          <a href="https://linkedin.com/in/galjakic" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">LinkedIn</a>
+          <a href="https://github.com/morpheus7CS" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Github</a>
+          <a href="/uses" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Uses</a>
+          <a href="/this-page" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">$this->page</a>
+          <!--<a href="/supports" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Supports</a>-->
+      </span>
+    </div>
+</footer> 
+
+    </body>
+</html>

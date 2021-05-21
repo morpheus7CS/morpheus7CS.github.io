@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="bNxytYqS7aSeCyVwnQ5jbQCMR3kcvkk5zzNfR9BM">
+
+        <title>gal.jakic.dev</title>
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="/css/app.css?id=afaa61c47e9a9eb306c8">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+        <!-- Scripts -->
+        <script src="/js/app.js?id=b17537d67f6c6e3b98ff" defer></script>
+        <script>
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+
+            function data(){
+                return {
+                    navbarOpen: false,
+                    dark: (window.matchMedia('(prefers-color-scheme: dark)').matches),
+                    dob: Math.floor((Date.now()-Date.parse('07 Jan 1989')) / 86400000),
+                    toggleDarkMode() {
+                        this.dark = !this.dark
+                    },
+                }
+            }
+        </script>
+    </head>
+    <body class="bg-white dark dark:bg-gray-800" x-data="data()" :class="{'dark': dark }"">
+        
+        <nav class="h-32 fixed top-0 w-screen flex items-center justify-between flex-wrap bg-white dark:bg-gray-800 py-6 px-10 z-10 border-b border-burnt-orange">
+    <a href="https://gal.jakic.dev" class="flex items-center flex-shrink-0 text-burnt-orange mr-6">
+        
+            <img class="h-16 w-16 mr-4" src="/img/gjd-logo-circle.png" alt="gal.jakic.dev logo">
+    </a>
+    <div class="block lg:hidden">
+        <button
+            class="flex items-center px-3 py-2 text-burnt-orange"
+            @click="navbarOpen = !navbarOpen">
+            <i class="las la-3x la-stream"></i>
+        </button>
+    </div>
+    <div class="w-full block flex-grow font-bold lg:flex lg:items-center lg:w-auto text-left lg:text-right mt-10 lg:mt-0 bg-white dark:bg-gray-800 h-screen lg:h-auto" :class="{ 'hidden': !navbarOpen}">
+        <div class="text-md lg:flex-grow">
+            <a href="https://gal.jakic.dev"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg "">
+                <i class="las la-2x la-campground mr-2"></i>
+                Home
+            </a>
+            <!--<a href="#"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-book mr-2"></i>
+                Book
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-headset"></i>
+                Work
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-frog"></i>
+                Mini Apps
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-code-branch"></i>
+                Side Projects
+            </a>
+            <a href="#responsive-header"
+                class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4">
+                <i class="las la-2x la-terminal"></i>
+                Open Source
+            </a> -->
+            <a href="https://gal.jakic.dev/blog"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg ">
+                <i class="las la-2x la-feather mr-2"></i>
+                Blog
+            </a>
+            <!--
+            <a href="/talks"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-microphone-alt mr-2"></i>
+                Talks
+            </a>
+            <a href="/documentary"
+                class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 hover:text-burnt-orange mr-4 text-lg">
+                <i class="las la-2x la-mountain mr-2"></i>
+                Documentary
+            </a>
+            -->
+            <a href="/about" class="block mt-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-gray-300 hover:text-burnt-orange dark:hover:text-burnt-orange mr-4 text-lg text-burnt-orange dark:text-burnt-orange">
+                <i class="las la-2x la-address-card mr-2"></i>
+                About
+            </a>
+            <a class="block mt-4 lg:ml-4 lg:inline-flex items-center lg:mt-0 text-gray-700 dark:text-burnt-orange hover:text-burnt-orange dark:hover:text-burnt-orange text-lg" @click="toggleDarkMode()">
+                <i class="las la-2x la-adjust mr-2 transition delay-150 transform rotate-180" :class="{'rotate-0': dark }"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+
+        <main class="mt-20 pb-24 px-10 font-medium leading-5 text-gray-900 bg-transparent dark:bg-gray-800 dark:text-gray-100">
+            <div class="flex flex-col items-center">
+        <div class="pt-5 pb-0 leading-8 text-black" >
+            <div
+            class="flex flex-col justify-center items-center px-10 mx-auto text-black w-screen"
+            style="max-width: 1200px;">
+            <img
+            src="/img/gj-about.jpg"
+            alt=""
+            class="inline-block max-w-full align-middle border-0 box-border"
+            />
+        </div>
+        </div>
+        <div class="pt-5 pb-0 leading-8"  style="max-width: 1200px;">
+            <div class="px-10 mx-auto mb-16 text-left">
+            <h1
+            class="mx-0 mt-5 mb-2 font-sans text-6xl font-black lowercase"
+            style="line-height: 110%;"
+            >
+            <p>About me</p>
+        </h1>
+        <p class="my-2 text-2xl text-gray-700 dark:text-gray-300 prose dark:prose-dark max-w-none" style="line-height: 160%;">
+            A web developer turned project manager for growing startups with a passion for building great software development and customer support teams. Lucky to be able to do so as Project &amp; Product Manager at <a href="https://briefd.io">Briefd</a> and Platform Delivery Lead at <a href="https://hiveterminal.com">Hiveterminal</a>, and occasionally contribute to open-source software at night.
+        </p>
+        </div>
+        <div class="px-10 mx-auto text-black prose dark:prose-dark prose-xl prose-burnt-orange text-gray-700 dark:text-gray-300 font-normal font-serif" style="max-width: 1200px;">
+            <p>My journey into tech has largely been a happy accident. I had learned to tweak WordPress websites around 2006, gone on to develop websites for friends and clients and went into tech full-time in 2016, first as a developer and later as a project manager. This is when I first encountered and fell in love with <a target="_blank" href="https://laravel.com" rel="noopener noreferrer">Laravel</a>. I have since contributed minor fixes and changes to many open source projects in my spare time.</p>
+<p>I consider myself no expert, but rather believe that hard work and discipline trump talent. I am willing to offer a hand to the new developers and project managers coming into the tech industry.</p>
+<p>I also have immense luck in working in an environment, where how we get there is equally as important as the goal. This allows me to spend days thinking about the business processes and conversations and turning them into semi-automated systems of management. I have turned many of those lessons into meetup talks, conference talks and motivational speeches. I plan to expand on this soon on the website you are currently reading.</p>
+<p>When I'm not working (which is rare, but it happens), I take pleasure in the simple things. I enjoy reading to my son Leo and spending time with my family. I enjoy a good football game, cheering for Philadelphia Eagles and Texas Longhorns football teams. I also play the ukulele and am in the (endless) process of learning to play the guitar.</p>
+<p>I hope to one day become better at writing code and half-decent at flying airplanes.</p>
+        </div>
+        </div>
+        </div>
+        </main>
+
+        <footer class="text-gray-700 dark:text-gray-300 bg-transparent dark:bg-gray-800 font-normal">
+    <div class="px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <p class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">&copy; 2020 - Gal Jakič. All Rights Reserved.
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a href="https://twitter.com/TeamJakic" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Twitter</a>
+          <a href="https://linkedin.com/in/galjakic" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">LinkedIn</a>
+          <a href="https://github.com/morpheus7CS" target="_blank" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Github</a>
+          <a href="/uses" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Uses</a>
+          <a href="/this-page" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">$this->page</a>
+          <!--<a href="/supports" class="mx-2 opacity-75 text-xs leading-3 no-underline uppercase hover:text-burnt-orange hover:opacity-100">Supports</a>-->
+      </span>
+    </div>
+</footer> 
+
+    </body>
+</html>
